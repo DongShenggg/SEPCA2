@@ -318,7 +318,7 @@ var memberDB = {
                     var email = details.email;
                     var name = details.name;
                     var phone = details.phone;
-                    var country = details.country;
+                    var city = details.city;
                     var address = details.address;
                     var securityQuestion = details.securityQuestion;
                     var securityAnswer = details.securityAnswer;
@@ -329,7 +329,7 @@ var memberDB = {
                     if(password == null || password == '') {
                         var sql = 'UPDATE memberentity SET NAME=?, PHONE=?, CITY=?, ADDRESS=?, SECURITYQUESTION=?,'
                         + 'SECURITYANSWER=?, AGE=?, INCOME=?, SERVICELEVELAGREEMENT=? WHERE EMAIL=?';
-                        var sqlArgs = [name,phone,country,address,securityQuestion,securityAnswer,age,income,sla,email];
+                        var sqlArgs = [name,phone,city,address,securityQuestion,securityAnswer,age,income,sla,email];
                         conn.query(sql, sqlArgs, function (err, result) {
                             if (err) {
                                 conn.end();
@@ -346,7 +346,7 @@ var memberDB = {
                         bcrypt.hash(password, 5, function(err, hash) {
                             var sql = 'UPDATE memberentity SET NAME=?, PHONE=?, CITY=?, ADDRESS=?, SECURITYQUESTION=?,'
                                 + 'SECURITYANSWER=?, AGE=?, INCOME=?, SERVICELEVELAGREEMENT=?, PASSWORDHASH=? WHERE EMAIL=?';
-                            var sqlArgs = [name,phone,country,address,securityQuestion,securityAnswer,age,income,sla,hash,email];
+                            var sqlArgs = [name,phone,city,address,securityQuestion,securityAnswer,age,income,sla,hash,email];
                             conn.query(sql, sqlArgs, function (err, result) {
                                 if (err) {
                                     conn.end();
