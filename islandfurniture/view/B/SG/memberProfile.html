@@ -71,6 +71,7 @@
                             }
                         }
                         for (i = 0; i < orderIdList.length; i++) {             
+                                         
                             htmlTxt += '<h5>Order #' + (i+1) + '</h5>';
                             var counter = 0;
                             //get bought items by order ID
@@ -245,7 +246,7 @@
                             email: document.getElementById("email").value,
                             name: document.getElementById("name").value,
                             phone: document.getElementById("phone").value,
-                            country: document.getElementById("country").value,
+                            city: document.getElementById("city").value,
                             address: document.getElementById("address").value,
                             securityQuestion: document.getElementById("securityQuestion").value,
                             securityAnswer: document.getElementById("securityAnswer").value,
@@ -329,8 +330,8 @@
                                             <input class="form-control" required="true" pattern="[0-9]*" title="Numbers only" type="text" id="phone" />
                                         </div>
                                         <div class="form-group">
-                                            <label>Country</label>
-                                            <select id="country">
+                                            <label>City</label>
+                                            <select id="city">
                                                 <option value=""></option>
                                                 <option value="Afganistan">Afghanistan</option>
                                                 <option value="Albania">Albania</option>
