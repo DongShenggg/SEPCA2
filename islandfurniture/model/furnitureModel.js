@@ -20,7 +20,7 @@ var furnitureDB = {
                             return reject(err);
                         } else {
                             var furList = [];
-                            for(var i = i; i < result.length; i++) {
+                            for(var i = 0; i < result.length; i++) {
                                 var fur = new Furniture();
                                 fur.id = result[i].id;
                                 fur.name = result[i].name;
@@ -62,7 +62,7 @@ var furnitureDB = {
                                 return reject(err);
                             } else {
                                 var furList = [];
-                                for(var i = i; i < result.length; i++) {
+                                for(var i = 0; i < result.length; i++) {
                                     var fur = new Furniture();
                                     fur.id = result[i].id;
                                     fur.name = result[i].name;
@@ -92,7 +92,7 @@ var furnitureDB = {
                                 return reject(err);
                             } else {
                                 var furList = [];
-                                for(var i = i; i < result.length; i++) {
+                                for(var i = 0; i < result.length; i++) {
                                     var fur = new Furniture();
                                     fur.id = result[i].id;
                                     fur.name = result[i].name;
