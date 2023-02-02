@@ -107,6 +107,7 @@ var furnitureDB = {
                                     fur.price = result[i].price;
                                     furList.push(fur);
                                 }
+                                
                                 conn.end();
                                 return resolve(furList);
                             }
@@ -135,19 +136,22 @@ var furnitureDB = {
                                 conn.end();
                                 return reject(err);
                             } else {
+                                var furList = [];
+                                for(var i = 0; i < result.length; i++) {
                                 var fur = new Furniture();
-                                fur.id = result[0].id;
-                                fur.name = result[0].name;
-                                fur.imageURL = result[0].imageURL;
-                                fur.sku = result[0].sku;
-                                fur.description = result[0].description;
-                                fur.type = result[0].type;
-                                fur.length = result[0].length;
-                                fur.width = result[0].width;
-                                fur.height = result[0].height;
-                                fur.category = result[0].category;
+                                fur.id = result[i].id;
+                                fur.name = result[i].name;
+                                fur.imageURL = result[i].imageURL;
+                                fur.sku = result[i].sku;
+                                fur.description = result[i].description;
+                                fur.type = result[i].type;
+                                fur.length = result[i].length;
+                                fur.width = result[i].width;
+                                fur.height = result[i].height;
+                                fur.category = result[i].category;
+                            }
                                 conn.end();
-                                return resolve(fur);
+                                return resolve(furList);
                             }
                         });
                     }
@@ -161,20 +165,23 @@ var furnitureDB = {
                                 conn.end();
                                 return reject(err);
                             } else {
+                                var furList = [];
+                                for(var i = 0; i < result.length; i++) {
                                 var fur = new Furniture();
-                                fur.id = result[0].id;
-                                fur.name = result[0].name;
-                                fur.imageURL = result[0].imageURL;
-                                fur.sku = result[0].sku;
-                                fur.description = result[0].description;
-                                fur.type = result[0].type;
-                                fur.length = result[0].length;
-                                fur.width = result[0].width;
-                                fur.height = result[0].height;
-                                fur.category = result[0].category;
-                                fur.price = result[0].price;
+                                fur.id = result[i].id;
+                                fur.name = result[i].name;
+                                fur.imageURL = result[i].imageURL;
+                                fur.sku = result[i].sku;
+                                fur.description = result[i].description;
+                                fur.type = result[i].type;
+                                fur.length = result[i].length;
+                                fur.width = result[i].width;
+                                fur.height = result[i].height;
+                                fur.category = result[i].category;
+                                fur.price = result[i].price;
+                                }
                                 conn.end();
-                                return resolve(fur);
+                                return resolve(furList);
                             }
                         });
                     }
